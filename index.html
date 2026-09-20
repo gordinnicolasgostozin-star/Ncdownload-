@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NCDownload</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar">
+    <div class="logo">NC<span>Download</span></div>
+    <nav>
+      <button class="nav active" data-view="home">⌂ Início</button>
+      <button class="nav" data-view="search">⌕ Buscar</button>
+      <button class="nav" data-view="library">♫ Minha biblioteca</button>
+      <button class="nav" data-view="downloads">↓ Downloads</button>
+    </nav>
+    <div class="side-note">Músicas disponíveis para download devem ser licenciadas ou autorizadas pelo detentor dos direitos.</div>
+  </aside>
+
+  <main>
+    <header>
+      <button id="menu">☰</button>
+      <div class="searchbox"><input id="search" placeholder="Buscar músicas, artistas..."></div>
+      <button id="loginBtn" class="login">Entrar</button>
+    </header>
+
+    <section id="content"></section>
+  </main>
+</div>
+
+<div class="player" id="player">
+  <div class="now">
+    <div class="cover small" id="pCover">♪</div>
+    <div><b id="pTitle">Nenhuma música</b><small id="pArtist">Escolha uma faixa</small></div>
+  </div>
+  <div class="controls">
+    <button id="prev">⏮</button><button id="play">▶</button><button id="next">⏭</button>
+    <input id="progress" type="range" min="0" max="100" value="0">
+  </div>
+  <div class="volume">🔊 <input id="volume" type="range" min="0" max="1" step=".01" value=".8"></div>
+</div>
+
+<div class="modal hidden" id="loginModal">
+  <div class="modal-card">
+    <button class="close" id="closeLogin">×</button>
+    <h2 id="authTitle">Entrar</h2>
+    <input id="email" type="email" placeholder="E-mail">
+    <input id="password" type="password" placeholder="Senha">
+    <button class="primary" id="authAction">Entrar</button>
+    <p id="authMsg"></p>
+    <button class="link" id="toggleAuth">Criar conta</button>
+  </div>
+</div>
+
+<audio id="audio"></audio>
+<script src="app.js"></script>
+</body>
+</html>
