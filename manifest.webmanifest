@@ -1,0 +1,16 @@
+{
+  "name": "NCDownload",
+  "short_name": "NCDownload",
+  "description": "Seu aplicativo de música NCDownload",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0b12",
+  "theme_color": "#0b0b12",
+  "orientation": "portrait",
+  "scope": "./",
+  "lang": "pt-BR",
+  "categories": [
+    "music",
+    "entertainment"
+  ]
+}
